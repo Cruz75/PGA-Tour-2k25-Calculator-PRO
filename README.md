@@ -3,7 +3,7 @@
 ![logo](https://github.com/user-attachments/assets/0148b9b8-90d3-405e-a880-0aa759e3ae6a)
 
 
-Welcome to the official repository for the **PGA Tour 2K25 Calculator**, an auxiliary tool for Windows designed to help players perfect their strategy on the virtual course.
+Welcome to the official repository for the **PGA Tour 2K25 Calculator**, **a strategic learning tool for Windows designed to help players understand and master the game's physics.**
 
 ## Official Page & Downloads
 
@@ -37,6 +37,10 @@ The PRO version is the definitive tool for players seeking maximum control and p
 | **Integrated User Manual** | ✔️ | ✔️ |
 
 ---
+
+## ⚠️ An Important Note on Calculations
+
+**The calculations in this app provide a powerful baseline based on a 'perfect' shot under the given conditions. However, every player has a unique swing and playstyle. The real power of the PRO version lies in its deep customization. We encourage you to use the "Customize Factors" menu to meticulously fine-tune the app's logic to perfectly match your personal in-game results. Think of this not as a 'perfect shot' button, but as a framework for you to build your own perfect strategy.**
 
 ## Direct Downloads (Releases)
 
