@@ -40,7 +40,7 @@ The PRO version is the definitive tool for players seeking maximum control and p
 
 ## Direct Downloads (Releases)
 
-You can find the `.zip` packages for both versions in the **[Releases](https://github.com/cruzpff/PGA-Tour-2K25-Calculator/releases)** section of this repository.
+You can find the `.zip` packages for both versions in the **[Releases](https://github.com/Cruz75/PGA-Tour-2k25-Calculator-PRO/releases)** section of this repository.
 
 ## Support The Project
 
