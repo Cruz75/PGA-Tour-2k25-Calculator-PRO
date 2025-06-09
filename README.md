@@ -1,49 +1,49 @@
 # PGA Tour 2K25 Calculator (PRO & LITE)
 
-![Immagine Banner o Logo](INSERISCI_QUI_URL_A_UN_BANNER_GRAFICO)
+![Your Banner or Logo Image](INSERT_URL_TO_YOUR_BANNER_IMAGE_HERE)
 
-Benvenuto nella repository ufficiale del **PGA Tour 2K25 Calculator**, uno strumento ausiliario per Windows progettato per aiutare i giocatori a perfezionare la propria strategia sul campo virtuale.
+Welcome to the official repository for the **PGA Tour 2K25 Calculator**, an auxiliary tool for Windows designed to help players perfect their strategy on the virtual course.
 
-## Pagina Ufficiale e Download
+## Official Page & Downloads
 
-Per la migliore esperienza utente, una presentazione dettagliata e per scaricare le applicazioni, visita la nostra pagina ufficiale su **Itch.io**. La versione PRO è offerta con un modello "Paga quanto vuoi" per supportare il progetto.
+For the best user experience, a detailed presentation, and to download the applications, please visit our official Itch.io page. The PRO version is offered on a "Pay What You Want" basis to support the project.
 
-**➡️ [Visita la Pagina Ufficiale su Itch.io](https://cruz75.itch.io/pga-calculator-pro)**
+**➡️ [Visit the Official Itch.io Page](https://cruz75.itch.io/pga-calculator-pro)**
 
 ---
 
-## Le Versioni
+## The Versions
 
-Questo progetto offre due versioni per soddisfare le esigenze di ogni tipo di giocatore:
+This project offers two versions to meet the needs of every type of player:
 
-###  calculateur LITE (v1.0)
-La versione LITE è perfetta per iniziare. Fornisce calcoli rapidi e precisi per i fattori più importanti come vento, elevazione e lie, con un'interfaccia semplice e intuitiva.
+###  ⛳ Calculator LITE (v1.0)
+The LITE version is perfect for getting started. It provides quick and accurate calculations for the most important factors like wind, elevation, and lie, with a simple and intuitive interface.
 
-### 👑 Calcolatore PRO (v1.9.1.0 e successive)
-La versione PRO è lo strumento definitivo per i giocatori che cercano il massimo controllo e precisione. Include tutte le funzionalità della LITE e molto altro.
+### 👑 Calculator PRO (v1.9.0.9 and later)
+The PRO version is the definitive tool for players seeking maximum control and precision. It includes all the features of the LITE version and much more.
 
-| Funzionalità | LITE | PRO |
+| Feature | LITE | PRO |
 | :--- | :---: | :---: |
-| Calcolo Vento & Elevazione | ✔️ | ✔️ |
-| Calcolo Lie (Palla & Piedi) | ✔️ | ✔️ |
-| **Calcolo del Rotolamento (Roll)** | ❌ | ✔️ |
-| **Gestione Sacca Mazze** | ❌ | ✔️ |
-| **Cronologia Tiri** | ❌ | ✔️ |
-| **Salva/Carica Configurazione** | ❌ | ✔️ |
-| **Personalizzazione Fattori Avanzata** | ❌ | ✔️ |
-| **Sistema di Mira Laterale Visivo** | ❌ | ✔️ |
-| **Controllo Aggiornamenti Automatico** | ❌ | ✔️ |
-| **Manuale Utente Integrato** | ✔️ | ✔️ |
+| Wind & Elevation Calculation | ✔️ | ✔️ |
+| Ball & Stance Lie Calculation | ✔️ | ✔️ |
+| **Advanced Roll Calculation** | ❌ | ✔️ |
+| **Club Bag Management** | ❌ | ✔️ |
+| **Shot History** | ❌ | ✔️ |
+| **Save/Load Configuration** | ❌ | ✔️ |
+| **Advanced Factor Customization** | ❌ | ✔️ |
+| **Visual Lateral Aim System** | ❌ | ✔️ |
+| **Automatic Update Checker** | ❌ | ✔️ |
+| **Integrated User Manual** | ✔️ | ✔️ |
 
 ---
 
-## Download Diretti (Releases)
+## Direct Downloads (Releases)
 
-Puoi trovare i pacchetti `.zip` di entrambe le versioni nella sezione **[Releases](https://github.com/cruzpff/PGA-Tour-2K25-Calculator/releases)** di questa repository.
+You can find the `.zip` packages for both versions in the **[Releases](https://github.com/cruzpff/PGA-Tour-2K25-Calculator/releases)** section of this repository.
 
-## Supporta il Progetto
+## Support The Project
 
-Se trovi utile la versione PRO e vuoi mostrare il tuo apprezzamento per le centinaia di ore dedicate allo sviluppo, considera di fare una donazione tramite la pagina Itch.io. Ogni contributo aiuta a mantenere vivo il progetto!
+If you find the PRO version useful and want to show your appreciation for the hundreds of hours invested in its development, please consider making a donation via the Itch.io page. Every contribution helps keep the project alive!
 
-## Licenza
-Il software è distribuito come Freeware. I termini d'uso sono inclusi in ogni pacchetto di download (`LICENSE.txt`). Il codice sorgente non è pubblico.
+## License
+This software is distributed as Freeware. The terms of use are included in each download package (`LICENSE.txt`). The source code is not public.
