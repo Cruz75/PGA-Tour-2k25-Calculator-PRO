@@ -1,6 +1,7 @@
 # PGA Tour 2K25 Calculator (PRO & LITE)
 
-![Your Banner or Logo Image](INSERT_URL_TO_YOUR_BANNER_IMAGE_HERE)
+![logo](https://github.com/user-attachments/assets/0148b9b8-90d3-405e-a880-0aa759e3ae6a)
+
 
 Welcome to the official repository for the **PGA Tour 2K25 Calculator**, an auxiliary tool for Windows designed to help players perfect their strategy on the virtual course.
 
