@@ -46,4 +46,4 @@ You can find the `.zip` packages for both versions in the **[Releases](https://g
 If you find the PRO version useful and want to show your appreciation for the hundreds of hours invested in its development, please consider making a donation via the Itch.io page. Every contribution helps keep the project alive!
 
 ## License
-This software is distributed as Freeware. The terms of use are included in each download package (`LICENSE.txt`). The source code is not public.
+This software is distributed as Freeware. The terms of use are included in each download package (`EULA.txt`). The source code is not public.
