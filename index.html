@@ -226,6 +226,55 @@
             from {opacity: 0;}
             to {opacity: 1;}
         }
+
+        /* --- FAQ Section --- */
+        .faq {
+            background-color: var(--white);
+        }
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+        }
+        .faq-question {
+            background-color: transparent;
+            border: none;
+            width: 100%;
+            text-align: left;
+            padding: 20px 0;
+            font-family: 'Lato', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--dark-text);
+        }
+        .faq-question::after {
+            content: '+'; /* Icona a forma di più */
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: var(--primary-blue);
+            transition: transform 0.3s ease;
+        }
+        .faq-question.active::after {
+            content: '−'; /* Meno quando è attivo */
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 10px;
+        }
+        .faq-answer p {
+            padding-bottom: 20px;
+            color: var(--light-text);
+            line-height: 1.7;
+        }
         
     </style>
 </head>
@@ -358,6 +407,50 @@
             <img class="lightbox-content" id="lightboxImg">
             <div id="lightbox-caption"></div>
         </div>
+
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-container">
+        
+                    <div class="faq-item">
+                        <button class="faq-question">Is this a cheat or an exploit?</button>
+                        <div class="faq-answer">
+                            <p>No. The calculator is a standalone training tool that does not read, interact with, or modify the game's memory or files in any way. Its purpose is to help you learn and internalize the game's complex physics, much like a real golfer uses a rangefinder or a yardage book. The goal is to make you a better player who eventually no longer needs the tool.</p>
+                        </div>
+                    </div>
+        
+                    <div class="faq-item">
+                        <button class="faq-question">What platform does it run on?</button>
+                        <div class="faq-answer">
+                            <p>Currently, both the LITE and PRO calculators are available for Windows only. They are standalone applications that do not require installation. Simply download the ZIP file, extract its content, and run the .exe file.</p>
+                        </div>
+                    </div>
+        
+                    <div class="faq-item">
+                        <button class="faq-question">Is the PRO version really free?</button>
+                        <div class="faq-answer">
+                            <p>Yes. The PRO version is offered on a "Pay What You Want" model. You can enter $0 to download it completely for free. If you find it valuable and want to support the project, you have the option to leave a donation of any amount you feel is fair. All support is greatly appreciated!</p>
+                        </div>
+                    </div>
+        
+                    <div class="faq-item">
+                        <button class="faq-question">Will the app be updated?</button>
+                        <div class="faq-answer">
+                            <p>The application is provided as-is, and there is no guaranteed or planned regular update schedule. However, the PRO version includes an "Update Checker" so you can easily check for and access any future improvements, should they be released.</p>
+                        </div>
+                    </div>
+        
+                    <div class="faq-item">
+                        <button class="faq-question">What if the calculations don't perfectly match my playstyle?</button>
+                        <div class="faq-answer">
+                            <p>This is where the PRO version truly shines. The default calculations are a powerful baseline, but since every player is unique, the PRO version allows you to meticulously fine-tune every factor in the "Customize Factors" menu. You can adjust wind, roll, lie, and terrain effects to perfectly calibrate the calculator to your personal in-game results.</p>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </section>
         
         <section class="final-cta">
             <div class="container">
@@ -411,6 +504,23 @@
             modal.style.display = "none";
         }
     }
+</script>
+
+<script>
+    // --- FAQ Accordion Script ---
+    var faqQuestions = document.querySelectorAll(".faq-question");
+
+    faqQuestions.forEach(question => {
+        question.addEventListener("click", function() {
+            this.classList.toggle("active");
+            var answer = this.nextElementSibling;
+            if (answer.style.maxHeight) {
+                answer.style.maxHeight = null;
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            } 
+        });
+    });
 </script>
     
 </body>
