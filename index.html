@@ -277,10 +277,18 @@
         }
 
         /* --- Logo Styling in Header --- */
+        .logo {
+            display: flex; /* Allinea gli elementi in orizzontale */
+            align-items: center; /* Centra verticalmente logo e testo */
+            gap: 12px; /* Aggiunge uno spazio tra logo e testo */
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-text);
+            text-decoration: none;
+        }
         .logo img {
-            max-height: 40px; /* Imposta l'altezza massima del logo */
+            max-height: 40px; /* Mantiene l'altezza massima del logo */
             width: auto;
-            display: block;
         }
         
     </style>
@@ -290,7 +298,8 @@
     <header class="main-header">
         <div class="container">
             <a href="#" class="logo">
-                <img src="images/logo_calculator_alpha.png" alt="PGA 2K25 Calculator Logo">
+                <img src="images/mini_logo.png" alt="PGA 2K25 Calculator Logo">
+                <span>PGA 2K25 Calculator</span>
             </a>
             <nav class="main-nav">
                 <a href="#features">Features</a>
