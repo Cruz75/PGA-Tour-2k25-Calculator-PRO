@@ -275,6 +275,13 @@
             color: var(--light-text);
             line-height: 1.7;
         }
+
+        /* --- Logo Styling in Header --- */
+        .logo img {
+            max-height: 40px; /* Imposta l'altezza massima del logo */
+            width: auto;
+            display: block;
+        }
         
     </style>
 </head>
@@ -282,7 +289,9 @@
 
     <header class="main-header">
         <div class="container">
-            <a href="#" class="logo">PGA 2K25 Calculator</a>
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="PGA 2K25 Calculator Logo">
+            </a>
             <nav class="main-nav">
                 <a href="#features">Features</a>
                 <a href="#compare">Compare</a>
