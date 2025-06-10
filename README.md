@@ -9,7 +9,7 @@ Welcome to the official repository for the **PGA Tour 2K25 Calculator**, **a str
 
 For the best user experience, a detailed presentation, and to download the applications, please visit our official Itch.io page. The PRO version is offered on a "Pay What You Want" basis to support the project.
 
-**➡️ [Visit the Official Itch.io Page](https://cruz75.itch.io/pga-tour-2k25-calculator-pro)**
+**➡️ [Visit the Official Page](https://cruz75.github.io/PGA-Tour-2k25-Calculator-PRO/#)**
 
 ---
 
