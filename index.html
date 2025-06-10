@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PGA Tour 2K25 Calculator - Your Strategic Caddy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- CSS Reset & Variables --- */
+        :root {
+            --primary-blue: #3498DB;
+            --secondary-green: #2ECC71;
+            --dark-text: #34495E;
+            --light-text: #7f8c8d;
+            --bg-light: #F4F6F8;
+            --white: #FFFFFF;
+            --border-color: #e1e5e8;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        h1, h2, h3 { font-family: 'Lato', sans-serif; }
+        h1 { font-size: 3.5rem; font-weight: 900; margin-bottom: 1rem; }
+        h2 { font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 3rem; color: var(--dark-text); }
+        section { padding: 60px 0; }
+        img { max-width: 100%; border-radius: 8px; }
+
+        /* --- Header & Navigation --- */
+        .main-header {
+            background-color: var(--white);
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--dark-text); text-decoration: none; }
+        .main-nav a { text-decoration: none; color: var(--dark-text); margin-left: 25px; font-weight: 600; transition: color 0.3s; }
+        .main-nav a:hover { color: var(--primary-blue); }
+
+        /* --- Hero Section --- */
+        .hero {
+            background-color: var(--white);
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero p { font-size: 1.25rem; color: var(--light-text); max-width: 700px; margin: 0 auto 2rem auto; }
+        .hero-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            border: 2px solid transparent;
+        }
+        .btn-pro { background-color: var(--primary-blue); color: var(--white); }
+        .btn-pro:hover { background-color: #2980b9; transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .btn-lite { background-color: transparent; color: var(--dark-text); border-color: var(--border-color); }
+        .btn-lite:hover { background-color: var(--bg-light); border-color: var(--dark-text); transform: translateY(-3px); }
+
+        /* --- Philosophy Section --- */
+        .philosophy { background-color: var(--bg-light); }
+        .philosophy-content {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .philosophy-content h3 { font-size: 1.8rem; margin-bottom: 1rem; }
+
+        /* --- Features Section --- */
+        .features { background-color: var(--white); }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .feature-item { padding: 20px; }
+        .feature-item .icon { font-size: 3rem; color: var(--primary-blue); margin-bottom: 1rem; }
+        .feature-item h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+
+        /* --- Comparison Table --- */
+        .comparison-table { width: 100%; border-collapse: collapse; margin-top: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .comparison-table th, .comparison-table td { padding: 15px; text-align: center; border: 1px solid var(--border-color); }
+        .comparison-table th { background-color: var(--dark-text); color: var(--white); font-size: 1.2rem; }
+        .comparison-table td:first-child { text-align: left; font-weight: 600; }
+        .comparison-table tbody tr:nth-child(even) { background-color: var(--white); }
+
+        /* --- Final CTA --- */
+        .final-cta { background-color: var(--primary-blue); color: var(--white); text-align: center; }
+        .final-cta h2 { color: var(--white); }
+        .final-cta p { max-width: 600px; margin: 0 auto 2rem auto; opacity: 0.9; }
+        .final-cta .btn-pro { background-color: var(--white); color: var(--primary-blue); }
+        .final-cta .btn-pro:hover { background-color: var(--bg-light); }
+        
+        /* --- Footer --- */
+        .main-footer { padding: 30px 0; text-align: center; }
+        .footer-links a { margin: 0 15px; text-decoration: none; color: var(--light-text); font-weight: 600; }
+        .footer-links a:hover { color: var(--primary-blue); }
+        .copyright { margin-top: 15px; font-size: 0.9rem; color: #aaa; }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            .main-header .container { flex-direction: column; gap: 15px; }
+            .hero-buttons { flex-direction: column; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">PGA 2K25 Calculator</a>
+            <nav class="main-nav">
+                <a href="#features">Features</a>
+                <a href="#compare">Compare</a>
+                <a href="https://cruz75.itch.io/pga-tour-2k25-calculator-pro" target="_blank">Download</a>
+                <a href="https://github.com/Cruz75/PGA-Tour-2k25-Calculator-PRO/" target="_blank">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Build a Pro's Intuition</h1>
+                <p>The training tool that teaches you to play without it. Internalize the game's physics, master the variables, and make every shot with confidence.</p>
+                <div class="hero-buttons">
+                    <a href="https://cruz75.itch.io/pga-tour-2k25-calculator-pro" target="_blank" class="btn btn-pro">Download PRO (Pay What You Want)</a>
+                    <a href="https://cruz75.itch.io/pga-tour-2k25-calculator-lite" target="_blank" class="btn btn-lite">Download LITE (Free)</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="philosophy">
+            <div class="container">
+                <div class="philosophy-content">
+                    <h3>Our Philosophy: Your Training Partner</h3>
+                    <p>Our goal isn't for you to use this app forever. It's for you to use it to learn. See how a 10 mph crosswind *really* affects your shot. Understand the exact penalty of hitting from the rough. As you improve, you'll find yourself relying on it less and less. <strong>This tool's ultimate success is when you no longer need it.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2>PRO Version Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="icon">⚙️</div>
+                        <h3>Advanced Roll Calculation</h3>
+                        <p>Predict exactly where your ball will stop to perfect your approach shots.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">👜</div>
+                        <h3>Full Club Bag Management</h3>
+                        <p>Calibrate the tool to your personal playstyle by inputting your own club distances.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">🎯</div>
+                        <h3>Visual Lateral Aim System</h3>
+                        <p>An intuitive graphical widget shows you exactly where to aim to compensate for wind and slopes.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">💾</div>
+                        <h3>Save/Load & History</h3>
+                        <p>Review your past calculations and save entire configurations for any course condition.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">🛠️</div>
+                        <h3>Deep Factor Customization</h3>
+                        <p>For experts who want to fine-tune every single calculation to match their in-game results.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">🔄</div>
+                        <h3>Automatic Updates</h3>
+                        <p>The app notifies you whenever a new version with improvements is available.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="compare" class="compare">
+            <div class="container">
+                <h2>LITE vs. PRO</h2>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>LITE</th>
+                            <th>PRO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Wind &amp; Elevation Calculation</td><td>✔️</td><td>✔️</td></tr>
+                        <tr><td>Ball &amp; Stance Lie Calculation</td><td>✔️</td><td>✔️</td></tr>
+                        <tr><td><strong>Advanced Roll Calculation</strong></td><td>❌</td><td>✔️</td></tr>
+                        <tr><td><strong>Club Bag Management</strong></td><td>❌</td><td>✔️</td></tr>
+                        <tr><td><strong>Shot History</strong></td><td>❌</td><td>✔️</td></tr>
+                        <tr><td><strong>Save/Load Configuration</strong></td><td>❌</td><td>✔️</td></tr>
+                        <tr><td><strong>Advanced Factor Customization</strong></td><td>❌</td><td>✔️</td></tr>
+                        <tr><td><strong>Visual Lateral Aim System</strong></td><td>❌</td><td>✔️</td></tr>
+                        <tr><td><strong>Automatic Update Checker</strong></td><td>❌</td><td>✔️</td></tr>
+                        <tr><td><strong>Integrated User Manual</strong></td><td>✔️</td><td>✔️</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="final-cta">
+            <div class="container">
+                <h2>Ready to Start Your Training?</h2>
+                <p>Download the PRO version on a "Pay What You Want" basis. If it helps you elevate your game, consider leaving a tip to support the project!</p>
+                <a href="https://cruz75.itch.io/pga-tour-2k25-calculator-pro" target="_blank" class="btn btn-pro">Get Calculator PRO on Itch.io</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://cruz75.itch.io/pga-tour-2k25-calculator-pro" target="_blank">Itch.io Page</a>
+                <a href="https://github.com/Cruz75/PGA-Tour-2k25-Calculator-PRO/" target="_blank">GitHub Repository</a>
+            </div>
+            <p class="copyright">Copyright © 2025 Pierfrancesco "Cruz" Santacroce. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
