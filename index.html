@@ -124,10 +124,53 @@
         .final-cta .btn-pro:hover { background-color: var(--bg-light); }
         
         /* --- Footer --- */
-        .main-footer { padding: 30px 0; text-align: center; }
-        .footer-links a { margin: 0 15px; text-decoration: none; color: var(--light-text); font-weight: 600; }
-        .footer-links a:hover { color: var(--primary-blue); }
-        .copyright { margin-top: 15px; font-size: 0.9rem; color: #aaa; }
+        .main-footer {
+            background-color: var(--white);
+            padding: 50px 0 20px 0;
+            border-top: 1px solid var(--border-color);
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-brand, .footer-links, .footer-social {
+            flex: 1;
+            min-width: 220px;
+        }
+        .footer-brand .logo {
+            margin-bottom: 10px;
+        }
+        .footer-brand p {
+            color: var(--light-text);
+            font-size: 0.95rem;
+        }
+        .footer-links h4, .footer-social h4 {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--dark-text);
+        }
+        .footer-links a, .footer-social a {
+            display: block;
+            text-decoration: none;
+            color: var(--light-text);
+            margin-bottom: 10px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover, .footer-social a:hover {
+            color: var(--primary-blue);
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
 
         /* --- Responsive Design --- */
         @media (max-width: 768px) {
