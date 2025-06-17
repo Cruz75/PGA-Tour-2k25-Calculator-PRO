@@ -3,83 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CruzLabsStudio - Strategy Tools for Gamers</title>
-    <meta name="description" content="The official home of the PGA Tour 2K25 Strategy Suite, featuring the advanced Shot Calculator and Build Planner. Professional training tools to help you master the game.">
+    <title>CruzLabsStudio - PGA Strategic Suite</title>
+    <meta name="description" content="The official home of the PGA Strategic Suite, featuring the advanced Shot Calculator and Build Planner. Professional training tools to help you master the game.">
     <meta name="keywords" content="PGA Tour 2K25, PGA 2K25 calculator, golf game, CruzLabsStudio, wind calculator, build planner, training tool">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <link rel="icon" type="image/png" href="images/cruzlabstudio.png">
+    <link rel="icon" type="image/png" href="images/cruzlabstudio_logo.png">
 
     <style>
-        /* CSS Reset & Variables inspired by your app's style */
+        /* --- CSS Reset & VARIABILI COLORE AGGIORNATE --- */
         :root {
-            --primary-blue: #3498DB;
-            --secondary-green: #2ECC71;
+            --primary-orange: #fe7000; /* Nuovo colore primario dall'immagine */
+            --secondary-blue: #0070BA; /* Nuovo colore secondario dall'immagine */
             --dark-text: #34495E;
             --light-text: #7f8c8d;
-            --bg-color: #F4F6F8;
+            --bg-light: #F4F6F8;
             --white: #FFFFFF;
             --border-color: #e1e5e8;
-            --hero-overlay: rgba(0, 30, 50, 0.7);
         }
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
         body { font-family: 'Open Sans', sans-serif; background-color: var(--white); color: var(--dark-text); line-height: 1.7; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         h1, h2, h3 { font-family: 'Lato', sans-serif; font-weight: 900; }
-        h1 { font-size: 3.8rem; line-height: 1.1; }
         h2 { font-size: 2.8rem; text-align: center; margin-bottom: 50px; color: var(--dark-text); }
         section { padding: 80px 0; }
         .btn { display: inline-block; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: all 0.3s ease; font-size: 1.1rem; }
-        .btn-green { background-color: var(--secondary-green); color: var(--white); }
-        .btn-green:hover { background-color: #27ae60; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .btn-orange { background-color: var(--primary-orange); color: var(--white); }
+        .btn-orange:hover { background-color: #d95e00; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
 
         /* Header */
-        .main-header { background-color: rgba(255,255,255,0.9); padding: 15px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(5px); }
+        .main-header { background-color: rgba(255,255,255,0.95); padding: 15px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(5px); }
         .main-header .container { display: flex; justify-content: space-between; align-items: center; }
         .logo { display: flex; align-items: center; gap: 12px; font-size: 1.5rem; font-weight: 700; color: var(--dark-text); text-decoration: none; }
         .logo img { max-height: 40px; }
         .main-nav a { text-decoration: none; color: var(--dark-text); margin-left: 30px; font-weight: 600; transition: color 0.3s; }
-        .main-nav a:hover { color: var(--primary-blue); }
+        .main-nav a:hover { color: var(--primary-orange); }
 
-        /* Hero Section */
+        /* --- HERO SECTION MODIFICATA PER INCLUDERE LA TUA IMMAGINE --- */
         .hero {
-            color: var(--white);
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url('INSERISCI_URL_IMMAGINE_PROMOZIONALE_GLOBALE');
-            background-size: cover;
-            background-position: center;
+            background-color: var(--bg-light); /* Sfondo di fallback */
+            padding: 0;
+            height: auto;
         }
-        .hero-content { max-width: 800px; margin: 0 auto; }
-        .hero p { font-size: 1.3rem; margin: 20px 0 30px 0; opacity: 0.9; }
+        .hero img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        /* --- FINE MODIFICA --- */
+        
+        .cta-bar {
+            background-color: var(--dark-text);
+            color: var(--white);
+            padding: 30px 0;
+            text-align: center;
+        }
+        .cta-bar h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
 
         /* Features Section */
-        .features { background-color: var(--bg-light); }
+        .features { background-color: var(--white); }
         .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .feature-card { background: var(--white); padding: 30px; border-radius: 8px; border: 1px solid var(--border-color); text-align: center; }
-        .feature-card .icon { font-size: 3rem; color: var(--primary-blue); margin-bottom: 15px; }
-        .feature-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        .feature-card { background: var(--bg-light); padding: 30px; border-radius: 8px; text-align: center; border-top: 4px solid var(--secondary-blue);}
+        .feature-card .icon { font-size: 3rem; color: var(--secondary-blue); margin-bottom: 15px; }
+        .feature-card h3 { font-size: 1.5rem; margin-bottom: 10px; color: var(--dark-text); }
 
         /* Showcase Section */
-        .showcase { background-color: var(--white); }
+        .showcase { background-color: var(--bg-light); }
         .showcase-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
         .showcase-grid img { box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 8px; }
         .showcase-text h2 { text-align: left; }
 
-        /* Final CTA */
-        .final-cta { background-color: var(--dark-text); color: var(--white); text-align: center; }
-        .final-cta h2 { color: var(--white); }
-        .final-cta p { max-width: 600px; margin: 0 auto 30px auto; opacity: 0.8; }
-
         /* Footer */
         .main-footer { padding: 40px 0; text-align: center; background-color: #2c3e50; color: #BDC3C7; }
         .main-footer a { color: var(--white); text-decoration: none; margin: 0 15px; font-weight: 600; }
+        .main-footer a:hover { text-decoration: underline; }
 
         @media (max-width: 768px) {
             h1 { font-size: 2.8rem; }
@@ -92,66 +95,61 @@
     <header class="main-header">
         <div class="container">
             <a href="#" class="logo">
-                <img src="images/cruzlabstudio.png" alt="CruzLabsStudio Logo">
+                <img src="images/logo-cruzlabs.png" alt="CruzLabsStudio Logo">
                 <span>CruzLabsStudio</span>
             </a>
             <nav class="main-nav">
                 <a href="#features">Features</a>
                 <a href="#suite">The Suite</a>
-                <a href="https://cruz75.itch.io/" target="_blank">Download</a>
+                <a href="INSERISCI_QUI_URL_PAGINA_ITCHIO" target="_blank">Download</a>
             </nav>
         </div>
     </header>
 
     <main>
         <section class="hero">
-            <div class="hero-content">
-                <h1>Master Your Game with Professional Strategy Tools</h1>
-                <p>From pre-game planning to on-course execution, the PGA Strategy Suite gives you the data-driven insights you need to elevate your play.</p>
-                <a href="https://cruz75.itch.io/" target="_blank" class="btn btn-green">Download the Suite on Itch.io</a>
+            <img src="images/pgastrategy_logo.jpg" alt="PGA Strategic Suite Hero Image">
+        </section>
+
+        <section class="cta-bar">
+            <div class="container">
+                <h3>The complete strategic toolkit for PGA Tour 2K25.</h3>
+                <a href="INSERISCI_QUI_URL_PAGINA_ITCHIO" target="_blank" class="btn btn-orange">Download on Itch.io (Pay What You Want)</a>
             </div>
         </section>
 
         <section id="features" class="features">
             <div class="container">
-                <h2>A Complete Toolkit</h2>
+                <h2>A Suite of Powerful Tools</h2>
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="icon">📊</div>
                         <h3>Plan Your Build</h3>
-                        <p>Use the Build Planner to experiment with archetypes, skills, and fittings in a powerful offline interface.</p>
+                        <p>Use the **Build Planner** to experiment with archetypes, skills, and fittings in a powerful offline interface before you hit the course.</p>
                     </div>
                     <div class="feature-card">
                         <div class="icon">⛳</div>
                         <h3>Calculate Every Shot</h3>
-                        <p>Use the Calculator PRO to get precise data on wind, elevation, lie, and roll for every shot you take.</p>
+                        <p>Use the **Shot Calculator** to get precise data on wind, elevation, lie, and roll for every strategic shot you take.</p>
                     </div>
                     <div class="feature-card">
                         <div class="icon">🔍</div>
                         <h3>Compare & Optimize</h3>
-                        <p>Load and compare multiple player profiles side-by-side to find the absolute best configuration.</p>
+                        <p>Load and compare multiple player profiles side-by-side to find the absolute best configuration for your playstyle.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="suite" class="showcase">
-            <div class="container showcase-grid">
+             <div class="container showcase-grid">
                 <div class="showcase-image">
-                    <img src="images/screen.png" width=150px alt="Suite applications screenshot">
+                    <img src="INSERISCI_QUI_URL_SCREENSHOT_SUITE.png" alt="Suite applications screenshot">
                 </div>
                 <div class="showcase-text">
                     <h2>More Than a Calculator, It's a Training System</h2>
-                    <p>Our philosophy is to create tools that empower you. The Strategy Suite is designed to help you internalize the game's complex physics. Use it to learn the 'why' behind every shot, build your intuition, and develop the skills to play confidently on your own. The ultimate goal is for you to no longer need us.</p>
+                    <p>Our philosophy is to create tools that empower you. The Strategy Suite is designed to help you internalize the game's complex physics. Use it to learn the 'why' behind every shot, build your intuition, and develop the skills to play confidently on your own.</p>
                 </div>
-            </div>
-        </section>
-
-        <section class="final-cta">
-            <div class="container">
-                <h2>Ready to Elevate Your Game?</h2>
-                <p>The entire PGA Strategy Suite is available now on Itch.io on a "Pay What You Want" model. Download it for free, and if you find it valuable, consider supporting the project with a donation.</p>
-                <a href="https://cruz75.itch.io/" target="_blank" class="btn btn-green">Download Now & Support the Project</a>
             </div>
         </section>
     </main>
@@ -159,9 +157,9 @@
     <footer class="main-footer">
         <div class="container">
              <p>
-                <a href="https://cruz75.itch.io/" target="_blank">Itch.io</a> | 
-                <a href="https://x.com/CruzLabsStudio" target="_blank">X (Twitter)</a> | 
-                <a href="https://github.com/Cruz75/PGA-Tour-2k25-Calculator-PRO" target="_blank">GitHub</a>
+                <a href="INSERISCI_QUI_URL_PAGINA_ITCHIO" target="_blank">Itch.io</a> | 
+                <a href="INSERISCI_URL_PROFILO_X" target="_blank">X (Twitter)</a> | 
+                <a href="INSERISCI_QUI_URL_REPOSITORY_SUITE" target="_blank">GitHub</a>
             </p>
             <p class="copyright">Copyright © 2025 CruzLabsStudio. All Rights Reserved.</p>
         </div>
