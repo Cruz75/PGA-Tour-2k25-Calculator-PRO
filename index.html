@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CruzLabsStudio - Strategy Tools for Gamers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0078d4;
+            --orange-accent: #fe7000;
+            --dark-text: #34495E;
+            --light-text: #7f8c8d;
+            --bg-light: #F4F6F8;
+            --white: #FFFFFF;
+            --border-color: #e1e5e8;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Open Sans', sans-serif; background-color: var(--bg-light); color: var(--dark-text); line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        h1, h2, h3 { font-family: 'Lato', sans-serif; }
+        h1 { font-size: 3rem; font-weight: 900; margin-bottom: 1rem; }
+        h2 { font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 3rem; color: var(--dark-text); }
+        section { padding: 60px 0; }
+        .header { background-color: var(--white); padding: 15px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 12px; font-size: 1.5rem; font-weight: 700; color: var(--dark-text); text-decoration: none; }
+        .logo img { max-height: 40px; }
+        .hero { background-color: var(--white); text-align: center; padding: 80px 20px; }
+        .hero p { font-size: 1.25rem; color: var(--light-text); max-width: 700px; margin: 0 auto 2rem auto; }
+        .products-section { background-color: var(--bg-light); }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; align-items: stretch; }
+        .product-card { background-color: var(--white); border: 1px solid var(--border-color); border-radius: 12px; padding: 30px; text-align: center; display: flex; flex-direction: column; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: all 0.3s ease; }
+        .product-card:hover { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .product-card img { max-height: 120px; margin-bottom: 20px; }
+        .product-card h3 { font-size: 1.8rem; margin-bottom: 10px; }
+        .product-card p { font-size: 1rem; color: var(--light-text); flex-grow: 1; }
+        .btn { display: inline-block; margin-top: 20px; padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: all 0.3s ease; font-size: 1rem; }
+        .btn-orange { background-color: var(--orange-accent); color: var(--white); }
+        .btn-orange:hover { background-color: #e66000; }
+        .btn-blue { background-color: var(--primary-blue); color: var(--white); }
+        .btn-blue:hover { background-color: #005a9e; }
+        .footer { padding: 40px 0; text-align: center; background-color: #34495E; color: #BDC3C7;}
+        .footer a { color: var(--white); text-decoration: none; margin: 0 10px; font-weight: 600;}
+        .footer a:hover { text-decoration: underline; }
+        .copyright { margin-top: 20px; font-size: 0.9rem;}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="INSERISCI_URL_LOGO_CRUZLABSSTUDIO.png" alt="CruzLabsStudio Logo">
+                <span>CruzLabsStudio</span>
+            </a>
+            <nav>
+                <a href="INSERISCI_URL_PROFILO_X" target="_blank">Follow on X</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Professional Training Tools for Gamers</h1>
+                <p>Welcome to CruzLabsStudio, home of the PGA Strategy Suite. We build high-quality, professional-grade tools to help you master the mechanics of your favorite games.</p>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <div class="container">
+                <h2>Our Products</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="INSERISCI_URL_LOGO_PLANNER.png" alt="Build Planner Logo">
+                        <h3>PGA 2K25 Build Planner</h3>
+                        <p>The ultimate offline tool to plan, create, and compare your player builds. Experiment with archetypes, skills, and fittings to find the perfect setup before you hit the course.</p>
+                        <a href="INSERISCI_URL_PAGINA_ITCHIO_PLANNER" class="btn btn-blue">Download on Itch.io</a>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="INSERISCI_URL_LOGO_CALCULATOR.png" alt="Shot Calculator Logo">
+                        <h3>PGA 2K25 Shot Calculator</h3>
+                        <p>Your on-course digital caddy. Get precise calculations for wind, elevation, lie, and roll to make every strategic shot with confidence. Includes PRO and LITE versions.</p>
+                        <a href="INSERISCI_URL_PAGINA_ITCHIO_CALCULATOR" class="btn btn-orange">Download on Itch.io</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <a href="INSERISCI_URL_PAGINA_ITCHIO_CALCULATOR" target="_blank">Itch.io</a> | 
+                <a href="INSERISCI_URL_PROFILO_X" target="_blank">X (Twitter)</a> | 
+                <a href="INSERISCI_URL_REPOSITORY_SUITE" target="_blank">GitHub</a>
+            </p>
+            <p class="copyright">Copyright © 2025 CruzLabsStudio. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
